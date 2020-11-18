@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--p方式实现注入 p:property 通过set属性实现注入-->
+    <bean id="user1" class="com.study.di.User" p:name="wzz" p:age="18" scope="prototype"></bean>
+
+    <!--c方式注入 通过构造器实现注入-->
+    <bean id="user2" class="com.study.di.User" c:name="yyt" c:age="18"></bean>
+
+</beans>

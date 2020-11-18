@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <description>根据spring上下文中有的bean去注入</description>
+
+    <bean name="cat" class="com.study.autowired.Cat"></bean>
+    <bean name="dog" class="com.study.autowired.Dog"></bean>
+
+    <!--根据名称注入, 上面bean的名称(id)要与People中 setDog和setCat方法中形参中的名称一样-->
+    <bean id="people1" class="com.study.autowired.People" autowire="byName"></bean>
+
+    <!--根据类型注入, bean类型要与set方法的参数类型一致-->
+    <bean id="people2" class="com.study.autowired.People" autowire="byType"></bean>
+
+</beans>
